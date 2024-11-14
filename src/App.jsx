@@ -7,7 +7,7 @@ import axios from 'axios'
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-  const [search, setSearch] = useState('spider')
+  const [search, setSearch] = useState('batman')
 
   const state = useSelector((state) => state)
   const dispatch = useDispatch()
@@ -18,10 +18,10 @@ function App() {
 
   const getMovies = async () => {
     if(search === '') {
-      const { data } = await axios(`https://www.omdbapi.com/?apikey=af397643&s=spider`)
+      const { data } = await axios(`http://www.omdbapi.com/?apikey=d7e60fee&s=batman`)
       dispatch({type: 'GET_DATA', payload: {allMovie: data.Search}})
     } else {
-      const { data } = await axios(`https://www.omdbapi.com/?apikey=af397643&s=${search}`)
+      const { data } = await axios(`http://www.omdbapi.com/?apikey=d7e60fee&s=${search}`)
       dispatch({type: 'GET_DATA', payload: {allMovie: data.Search}})
     }
    
