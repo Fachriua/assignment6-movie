@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-    <div className="container">
+    <div>
       <Header 
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit}

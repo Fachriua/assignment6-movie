@@ -2,12 +2,12 @@ import Search from "./Search";
 
 const Header = ({ title, handleSubmit, handleInputChange }) => {
     return(
-        <div className="navbar bg-base-100 bg-orange-500 p-5 h-4 sm:p-5 h-auto flex flex-col sm:flex-row items-center justify-between">
+        <div className="navbar bg-base-100 bg-orange-500 p-5 h-7 sm:p-5 h-auto flex flex-col sm:flex-row items-center justify-between">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl text-white md:text-2xl text-white">{title}</a>
+                <a className="btn btn-ghost text-xl text-white">{title}</a>
             </div>
-            <div className="flex-none gap-2 h-2 sm:w-auto mt-3 sm:mt-0">
-                <div className="form-control sm:w-64">
+            <div className="flex-none gap-1 h-2">
+                <div className="form-control">
                     <Search handleSubmit={handleSubmit} handleInputChange={handleInputChange}/>
                 </div>
             </div>
